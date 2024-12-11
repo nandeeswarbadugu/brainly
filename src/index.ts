@@ -15,8 +15,8 @@ app.use('/api/v1/content',userMiddleWare,contentRouter);
 
 console.log(process.env.MONGO_URL);
 (async () => {
-    // const mongo_uri = process.env.MONGO_URL;
-    const mongo_uri = "mongodb+srv://nandeeswar7421:z2PImVuyH2iL51bZ@cluster0.odvpz.mongodb.net/brainly"
+    const mongo_uri = process.env.MONGO_URL;
+    
     if (!mongo_uri)
         throw new Error("MONGO URI is not defined");
     try {
